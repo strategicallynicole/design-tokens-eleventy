@@ -1,0 +1,89 @@
+$tokens: (
+  colors: (
+    urple: #5235DD,
+    joy: #2575FC,
+    noon: #FFD100,
+    fivepm: #FF8C61,
+    warningwillrobinson: #AC2285,
+    darkknight: #190134,
+    gloom: #B3ABBC,
+    eliotswhisper: #685879,
+    jennysnumber: #2B1E70
+  ),
+  grayscales: (
+    innocence: #ffffff,
+    smoothcriminal: #EBEFF7,
+    partlysunny: #EAEAEA,
+    dadada: #DDDDDD,
+    gloomy: #DBDBDB,
+    partlycloudy: #C4C4C4,
+    prozac: #666666,
+    thunderstorm: #212121,
+    paintit: #121212
+  ),
+  gradients: (
+    rhymeswithpurple: linear-gradient(270deg, #2575FC 0%, #5235DD 100%),
+    sunsjourney: linear-gradient(90deg, #FF8C61 27.27%, #FFD100 113.18%),
+    darkknightrises: linear-gradient(180deg, #32255B 0%, #2B2A36 100%),
+    grimmace: linear-gradient(88.11deg, #261F74 1.47%, #7D1F9D 119.06%)
+  ),
+  text-colors: (
+    h1: #190134,
+    h2: #685879,
+    h3: #B3ABBC,
+    h4: #190134,
+    h5: #190134,
+    h6: #190134,
+    p: #190134,
+    a: #5235DD
+  ),
+  size-scale: (
+    sm: 0.8rem,
+    md: 1rem,
+    lg: 1.4rem,
+    xl: 2rem
+  ),
+  font-sizes: (
+    h1: 32px,
+    h2: 24px,
+    h3: 20px,
+    h4: 16px,
+    h5: 14px,
+    h6: 12px,
+    p: 16px,
+    small: 14px,
+    tiny: 12px
+  ),
+  font-styles: (
+    heading-family: 'SF Pro Display',
+    heading-style: normal,
+    heading-weight: 800,
+    heading-line-height: 140%,
+    p-family: 'SF Pro Display',
+    p-style: normal,
+    p-weight: 400,
+    p-line-height: 150%,
+    bold-weight: 700,
+    text-decoration-line: true
+  ),
+  shadows: (
+    one: inset 0px -1px 0px #EAEAEA,
+    two: 0px 2px 10px rgba(25, 1, 52, 0.12),
+    three: 0px 4px 10px rgba(25, 1, 52, 0.16),
+    four: inset 0px 1px 0px #EAEAEA,
+    five: 0px -2px 10px rgba(25, 1, 52, 0.12),
+    six: 0px -4px 10px rgba(25, 1, 52, 0.16)
+  ),
+  logos: (
+    main: './assets/img/logos/main.svg',
+    side: './assets/img/logos/side.svg',
+    darkmain: './assets/img/logos/darkmain.svg',
+    darkside: './assets/img/logos/darkside.svg'
+  ),
+  icons: (
+    main: './assets/img/logos/mainicon.svg',
+    side: './assets/img/logos/sideicon.svg',
+    darkmain: './assets/img/logos/darkmainicon.svg',
+    darkside: './assets/img/logos/darksideicon.svg'
+  )
+);

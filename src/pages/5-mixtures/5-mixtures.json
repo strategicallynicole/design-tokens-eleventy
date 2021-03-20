@@ -1,0 +1,7 @@
+{
+	"tags": "organisms",
+	"layout": "elements",
+	"date": "Last Modified",
+	"hero_title": "Organisms",
+	"hero_text": "Organisms are fundamental to every website. We're styling them early on, so we can easily overwrite them with classes - when needed"
+}

@@ -1,0 +1,6 @@
+{
+	"src": "src",
+	"dist": "dist",
+	"assetSrc": "src/assets",
+	"assetDist": "dist/assets"
+}

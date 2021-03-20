@@ -1,0 +1,122 @@
+@import 'tokens';
+
+@function vars($name, $value) {
+
+  @each $name, $value in in $grayscales {
+    @return '$'+$name +':'+$value+';'
+  }
+
+}
+
+$colors: map-get($tokens, 'colors');
+$size-scale: map-get($tokens, 'size-scale');
+$gradients: map-get($tokens, 'gradients');
+$grayscales: map-get($tokens, 'grayscales');
+$text-colors: map-get($tokens, 'text-colors');
+$font-sizes: map-get($tokens, 'font-sizes');
+$font-styles: map-get($tokens, 'font-styles');
+$shadows: map-get($tokens, 'shadows');
+$logos: map-get($tokens, 'logos');
+$icons: map-get($tokens, 'logos');
+
+
+:root {
+
+  @each $color-name,
+  $color-value in $colors {
+    #{'--'+$color-name}: #{$color-value};
+  }
+
+  @each $grayscale-name,
+  $grayscale-value in $grayscales {
+    #{'--'+$grayscale-name}: #{$grayscale-value};
+  }
+  @each $text-color-name,
+  $text-color-value in $text-colors {
+    #{'--color-'+$text-color-name}: #{$text-color-value};
+  }
+  @each $font-size-element,
+  $font-size-value in $font-sizes {
+    #{'--font-size-'+$font-size-element}: #{$font-size-value};
+  }
+  @each $font-style-name,
+  $font-style-value in $font-styles {
+    #{'--font-'+$font-style-name}: #{$font-style-value};
+  }
+  @each $shadow-name,
+  $shadow-value in $shadows {
+    #{'--shadow-'+$shadow-name}: #{$shadow-value};
+  }
+
+  @each $logo-name,
+  $logo-value in $logos {
+    #{'--logo-'+$logo-name}: #{$logo-value};
+  }
+  @each $icon-name,
+  $icon-value in $icons {
+    #{'--icon-'+icon-name}: #{$icon-value};
+  }
+
+
+  @each $size in $size-scale {
+    #{'--size-' + nth($size, 1)}: #{nth($size, 2)};
+  }
+
+  @each $gradient-name, $gradient-value in $gradients {
+      #{'--'+$gradient-name}: #{$gradient-value};
+  }
+}
+
+@each $color-name,
+  $color-value in $colors {
+    #{"." + $color-name + '-bg'} {
+      background: #{$color-value};
+    }
+    #{"." + $color-name + '-text'} {
+      color: #{$color-value};
+    }
+  }
+
+  @each $gradient-name,
+  $gradient-value in $gradients {
+    #{"." + $gradient-name + '-bg'} {
+      background: #{$gradient-value};
+      background-attachment: fixed;
+    }
+    #{"." + $gradient-name + '-text'} {
+        background: #{$gradient-value};
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+  }
+  @each $grayscale-name,
+  $grayscale-value in $grayscales {    
+    #{"." + $grayscale-name + '-bg'} {
+      background: #{$grayscale-value};
+    }
+    #{"." + $grayscale-name + '-text'} {
+      color: #{$grayscale-value};
+    }
+  }
+
+  @each $text-color-name,
+  $text-color-value in $text-colors {
+  #{$text-color-name} {
+    color: #{$text-color-value};
+  }}
+
+  @each $font-size-element,
+  $font-size-value in $font-sizes {
+    #{$font-size-element}{
+      font-size: #{$font-size-value};
+    } 
+  }
+  @each $shadow-name,
+  $shadow-value in $shadows {
+    #{'.shadow-' + $shadow-name}{
+      box-shadow: #{$shadow-value};
+    } 
+  }
+
+  
+

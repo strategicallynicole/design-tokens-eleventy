@@ -1,0 +1,20 @@
+<!doctype html>
+<html class="no-js" dir="{% if dir %}{{dir}}{% else %}{{site.dir}}{% endif %}" lang="{% if lang %}{{lang}}{% else %}{{site.lang}}{% endif %}">
+<head>
+	{% include 'components/partials/meta.njk' %}
+</head>
+<body id="sdi-{{layout}}">
+
+	<div class="sdi-wrapper">
+		{% include "components/partials/header.njk" %}
+
+		{{ content | safe }}
+
+		{% include "components/partials/footer.njk" %}
+	</div>
+
+	{% include "components/partials/scroll-top.njk" %}
+
+<script src="/assets/js/site.js" type="text/javascript"></script>
+</body>
+</html>

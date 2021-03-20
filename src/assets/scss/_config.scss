@@ -1,0 +1,21 @@
+@import 'tokens';
+
+$colors: map-get($tokens, 'colors');
+$size-scale: map-get($tokens, 'size-scale');
+$gradients: map-get($tokens, 'gradients');
+
+:root {
+
+  @each $color-name,
+  $color-value in $colors {
+    --color-#{$color-name}: #{$color-value};
+  }
+
+  @each $size in $size-scale {
+    #{'--size-' + nth($size, 1)}: #{nth($size, 2)};
+  }
+
+  @each $gradient-name, $gradient-value in $gradients {
+      #{'--'+$gradient-name}: #{$gradient-value};
+  }
+}
